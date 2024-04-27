@@ -15,7 +15,8 @@
     "strict": true,
     "strictNullChecks": false,
     "noImplicitAny": true,
-    "outDir": "dist"
+    "outDir": "dist",
+    "skipLibCheck": true
   },
   "include": ["src"]
 }

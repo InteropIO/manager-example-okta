@@ -1,7 +1,5 @@
 import { start, Config } from '@interopio/manager';
 
-import { CustomOktaAuthenticator } from './CustomOktaAuthenticator.js';
-
 const config: Config = {
   name: 'local',
   base: 'api',
@@ -17,8 +15,15 @@ const config: Config = {
     // TODO: Replace this with your secret.
     secret: '85611bfe-6439-4cb1-9146-fee9fe8a2943',
   },
-  auth_method: 'custom',
-  auth_custom: new CustomOktaAuthenticator(),
+  auth_method: 'okta',
+  auth_okta: {
+    // TODO: Specify the appropriate okta verifier options here.
+    verifierOptions: {
+      issuer: 'https://trial-8928888.okta.com/oauth2/default',
+    },
+    // TODO: Specify the appropriate audiences here.
+    audiences: ['api://default'],
+  },
 };
 
 await start(config);
