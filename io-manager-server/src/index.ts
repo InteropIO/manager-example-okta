@@ -19,7 +19,7 @@ const config: Config = {
   auth_okta: {
     // TODO: Specify the appropriate okta verifier options here.
     verifierOptions: {
-      issuer: 'https://trial-8928888.okta.com/oauth2/default',
+      issuer: 'https://dev-10894256.okta.com/oauth2/default',
     },
     // TODO: Specify the appropriate audiences here.
     audiences: ['api://default'],
